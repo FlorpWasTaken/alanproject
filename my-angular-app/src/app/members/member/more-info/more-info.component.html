@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="col-12">
+    <button class="btn btn-primary btn-block p-2" (click)="tableToggle()">{{buttonText}}</button>
+  </div>
+  <div class="col-12"
+  *ngIf="showTable">
+    <table class="table table-sm table-striped table-hover mt-3">
+      <tbody>
+      <tr>
+        <td>Height</td>
+        <td>180cm</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>17</td>
+      </tr>
+      <tr>
+        <td>Sex</td>
+        <td>Male</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
