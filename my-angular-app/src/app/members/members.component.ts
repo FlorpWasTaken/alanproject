@@ -12,7 +12,6 @@ public members = members.default;
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.members);
   }
 
 }

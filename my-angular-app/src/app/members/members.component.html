@@ -4,6 +4,8 @@
 <br>
 <div class="row">
   <app-member
+    *ngFor="let member of members"
+    [member]="member"
   class="col-12 col-sm-6 col-md-4">
   </app-member>
 </div>

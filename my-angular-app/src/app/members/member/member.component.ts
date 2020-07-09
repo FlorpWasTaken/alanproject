@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-member',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./member.component.scss']
 })
 export class MemberComponent implements OnInit {
-
+@Input() member: any[];
   constructor() { }
 
   ngOnInit(): void {
