@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./member.component.scss']
 })
 export class MemberComponent implements OnInit {
-@Input() member: any[];
+@Input() member: any;
   constructor() { }
 
   ngOnInit(): void {

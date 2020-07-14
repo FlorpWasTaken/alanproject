@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./more-info.component.scss']
 })
 export class MoreInfoComponent implements OnInit {
-  @Input() member: any[];
+  @Input() member: any;
   constructor() { }
 public showTable: boolean;
 public buttonText: string;
