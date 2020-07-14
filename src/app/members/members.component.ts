@@ -8,7 +8,7 @@ import * as members from './members.json';
   styleUrls: ['./members.component.scss']
 })
 export class MembersComponent implements OnInit {
-public members = members.default;
+//public members = members.default;
   constructor() { }
 
   ngOnInit(): void {
