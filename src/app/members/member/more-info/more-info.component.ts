@@ -48,7 +48,7 @@ public formatAddress(){
 
   
   ngOnInit(): void {
-    this.showTable = true;
+    this.showTable = false;
     this.buttonText = 'More Info';
     this.formatAddress();
     // console.log(this.member);

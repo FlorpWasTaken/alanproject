@@ -5,7 +5,8 @@
   </div>
   <div class="col-12"
   *ngIf="showTable">
-    <table class="table table-sm table-striped table-hover mt-3">
+  <mat-tab-group>
+    <mat-tab label="Info">  <table class="table table-sm table-striped table-hover mt-3">
       <tbody>
         <tr *ngIf = "member.email">
           <td>Email</td>
@@ -28,6 +29,8 @@
         <td>{{formattedAddress}}</td>
       </tr>
       </tbody>
-    </table>
+    </table> </mat-tab>
+    <mat-tab label="Map"> Content 2 </mat-tab>
+  </mat-tab-group>
   </div>
 </div>
