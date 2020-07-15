@@ -28,7 +28,16 @@ public formattedAddress: string;
 
 public formatAddress(){
   if (this.member.address_street !== null){
-  this.formattedAddress = this.member.address_street;
+    this.formattedAddress = this.member.address_street;
+    if (this.member.address_suburb !== null){
+      this.formattedAddress = this.formattedAddress + '\n' + this.member.address_suburb;
+    }
+    if (this.member.address_city !== null){
+      this.formattedAddress = this.formattedAddress + '\n' + this.member.address_city;
+        if(this.member.address_postCode !==null){
+        this.formattedAddress = this.formattedAddress + ' ' + this.member.address_postCode;
+      }
+    }
   }else{
     this.formattedAddress = 'There is no address';
   }
