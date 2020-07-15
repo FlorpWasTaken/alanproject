@@ -52,7 +52,7 @@ export class MembersComponent implements OnInit {
       "firstname": "Luigi",
       "phone": "",
       "mobile": "",
-      "email": "luigi@freedomsoftware.co.nz",
+      "email": "",
       "website": "luigiadventures.co.nz",
       "address_street": "71 James Street",
       "address_suburb": "",
