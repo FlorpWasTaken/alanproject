@@ -7,6 +7,10 @@
   *ngIf="showTable">
     <table class="table table-sm table-striped table-hover mt-3">
       <tbody>
+        <tr *ngIf = "member.email">
+          <td>Email</td>
+          <td>{{member.email}}</td>
+        </tr>
       <tr>
         <td>Height</td>
         <td>{{member.height}}</td>
@@ -18,6 +22,10 @@
       <tr>
         <td>Sex</td>
         <td>Male</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>{{formattedAddress}}</td>
       </tr>
       </tbody>
     </table>

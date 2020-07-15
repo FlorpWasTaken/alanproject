@@ -10,6 +10,7 @@ export class MoreInfoComponent implements OnInit {
   constructor() { }
 public showTable: boolean;
 public buttonText: string;
+public formattedAddress: string;
 
   public tableToggle(){
     // This function will change the value of showtable to be the opposite of what it was
@@ -22,11 +23,25 @@ public buttonText: string;
       this.buttonText = 'more Info';
     }
     console.log('NOW the value of this.showtable is...' + this.showTable);
-
   }
+
+
+public formatAddress(){
+  if (this.member.address_street !== null){
+  this.formattedAddress = this.member.address_street;
+  }else{
+    this.formattedAddress = 'There is no address';
+  }
+  console.log('formattedAddress = ' + this.formattedAddress);
+  console.log(this.member.address_suburb);
+
+};
+
+  
   ngOnInit(): void {
-    this.showTable = false;
+    this.showTable = true;
     this.buttonText = 'More Info';
-    console.log('Hello Aidan');
+    this.formatAddress();
+    // console.log(this.member);
   }
 }
