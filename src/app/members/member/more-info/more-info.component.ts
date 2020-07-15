@@ -18,14 +18,14 @@ public formattedAddress: string;
     console.log('The value of this.showtable is...' + this.showTable);
     this.showTable = !this.showTable;
     if (this.showTable) {
-      this.buttonText = 'less Info';
+      this.buttonText = 'Less Info';
     } else {
-      this.buttonText = 'more Info';
+      this.buttonText = 'More Info';
     }
     console.log('NOW the value of this.showtable is...' + this.showTable);
   }
 
-
+//Formats multiple address variables into one address variable (formatted address) for display.
 public formatAddress(){
   if (this.member.address_street !== null){
     this.formattedAddress = this.member.address_street;
