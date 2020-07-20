@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MemberComponent } from './members/member/member.component';
 import { MoreInfoComponent } from './members/member/more-info/more-info.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CalculatorComponent } from './calculator/calculator.component';
+import { KeypadComponent } from './calculator/keypad/keypad.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     FooterComponent,
     MemberComponent,
-    MoreInfoComponent
+    MoreInfoComponent,
+    CalculatorComponent,
+    KeypadComponent
   ],
   imports: [
     BrowserModule,
