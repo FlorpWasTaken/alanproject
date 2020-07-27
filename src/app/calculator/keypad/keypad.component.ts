@@ -10,123 +10,50 @@ public firstNumber: string;
 public secondNumber: string;
 public actionToTake: string;
 public results: number;
+public screen: string;
 
   constructor() { }
 
-  public button1(){
+  //OPTIMISED CODE HERE
+  //Data is what shows on the button
+  //Action is false for a number, true for an operator
+  public buttonPress(data,action){
+    //Action goes here
+    console.log ('The button you pressed was ',data);
+    //If the button pressed was a number
+    if(action==false){
+      //If it is the first number and there is no operator
     if(this.actionToTake==''){
-    this.firstNumber = this.firstNumber + '1';
-    }else{
-      this.secondNumber= this.secondNumber + '1';
+      //If it is the first number pressed then set the screen variable to be this number
+      if(this.firstNumber==''){
+        this.firstNumber= data;
+        this.screen = data;
+      }else{
+        //This is not the first number pressed before there is an operator so we add them visually together
+      this.firstNumber = this.firstNumber + data;
+      this.screen = this.firstNumber
+      }
+     } else {
+       //There is an operator so we are now building up the second number
+        this.secondNumber= this.secondNumber + data;
+        this.screen = this.secondNumber
+      
     }
-    this.calculateResults();
+  }else{
+    //The button that was pressed was an operator (the second parameter was true)
+    this.actionToTake = data;
   }
-  public button2(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '2';
-      }else{
-        this.secondNumber= this.secondNumber + '2';
-      }
+    console.log ('The screen variable is ',this.screen);
 
-      this.calculateResults();
-    }
-  public button3(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '3';
-      }else{
-        this.secondNumber= this.secondNumber + '3';
-      }
+  }
 
-      this.calculateResults();
-    }
-  public button4(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '4';
-      }else{
-        this.secondNumber= this.secondNumber + '4';
-      }
-
-      this.calculateResults();
-    }
-  public button5(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '5';
-      }else{
-        this.secondNumber= this.secondNumber + '5';
-      }
-
-      this.calculateResults();
-    }
-  public button6(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '6';
-      }else{
-        this.secondNumber= this.secondNumber + '6';
-      }
-
-      this.calculateResults();
-    }
-  public button7(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '7';
-      }else{
-        this.secondNumber= this.secondNumber + '7';
-      }
-
-      this.calculateResults();
-    }
-  public button8(){
-    if(this.actionToTake==''){
-      this.firstNumber = this.firstNumber + '8';
-      }else{
-        this.secondNumber= this.secondNumber + '8';
-      }
-
-      this.calculateResults();
-    }
-    public button9(){
-      if(this.actionToTake==''){
-        this.firstNumber = this.firstNumber + '9';
-        }else{
-          this.secondNumber= this.secondNumber + '9';
-        }
-  
-        this.calculateResults();
-    }
-    public button0(){
-      if(this.actionToTake==''){
-        this.firstNumber = this.firstNumber + '0';
-        }else{
-          this.secondNumber= this.secondNumber + '0';
-        }
-  
-        this.calculateResults();
-    }
-    public buttonplus(){
-      this.actionToTake = '+';
-      console.log('You clicked the Plus Button', this.actionToTake);
-      this.calculateResults();
-    }
-    public buttonminus(){
-      this.actionToTake = '-';
-      console.log('You clicked the Minus Button', this.actionToTake);
-      this.calculateResults();
-    }
-    public buttondivided(){
-      this.actionToTake = '/';
-      console.log('You clicked the Divided By Button', this.actionToTake);
-      this.calculateResults();
-    }
-    public buttonmultiplied(){
-      this.actionToTake = '*';
-      console.log('You clicked the Multiplied By Button', this.actionToTake);
-      this.calculateResults();
-    }
-
+  //AIDAN'S CODE BENEATH THIS
   public calculateResults(){
     console.log('First ',this.firstNumber);
     console.log('Second ',this.secondNumber);
     console.log('Action ',this.actionToTake);
+
+    //Use a Javascript switch command here instead of ifs
     if(this.actionToTake=='+'){
     this.results = Number(this.firstNumber) +  Number(this.secondNumber);
     }else
@@ -139,15 +66,19 @@ public results: number;
     if(this.actionToTake=='*'){
     this.results = Number(this.firstNumber) * Number(this.secondNumber);
     }
+    //end of switch
     console.log('Results ',this.results);
+    this.screen = this.results.toString();
   }
 
   public clear(){
     this.firstNumber = '';
     this.secondNumber = '';
     this.actionToTake = '';
+    this.screen = '';
     this.results = null;
   }
+  
 
   ngOnInit(): void {
 this.clear();
