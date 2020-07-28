@@ -52,21 +52,21 @@ public screen: string;
     console.log('First ',this.firstNumber);
     console.log('Second ',this.secondNumber);
     console.log('Action ',this.actionToTake);
-
-    //Use a Javascript switch command here instead of ifs
-    if(this.actionToTake=='+'){
-    this.results = Number(this.firstNumber) +  Number(this.secondNumber);
-    }else
-    if(this.actionToTake=='-'){
-    this.results = Number(this.firstNumber) - Number(this.secondNumber);
-    }else
-    if(this.actionToTake=='/'){
-    this.results = Number(this.firstNumber) / Number(this.secondNumber);
-    }else
-    if(this.actionToTake=='*'){
-    this.results = Number(this.firstNumber) * Number(this.secondNumber);
+    //This is a simple switch statement 
+    //that determines which action the calculator takes based on the button pressed
+    switch(this.actionToTake){
+      case '+':
+      this.results = Number(this.firstNumber) +  Number(this.secondNumber);
+        break;
+      case '-':
+        this.results = Number(this.firstNumber) -  Number(this.secondNumber);
+        break;
+      case '*':
+        this.results =  Number(this.firstNumber) * Number(this.secondNumber);
+        break;
+      case '/':
+        this.results = Number(this.firstNumber) / Number(this.secondNumber)
     }
-    //end of switch
     console.log('Results ',this.results);
     this.screen = this.results.toString();
   }
