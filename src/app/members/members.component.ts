@@ -27,7 +27,7 @@ export class MembersComponent implements OnInit {
       "age": "17",
       "sex": "Male",
       "portrait": "",
-      "rating": "5"
+      "rating": 5
     },
     {
       "id": 2,
@@ -46,7 +46,7 @@ export class MembersComponent implements OnInit {
       "age": "50",
       "sex": "Male",
       "portrait": "../../../assets/images/alan.png",
-      "rating": "4"
+      "rating": 4
     },
     {
       "id": 3,
@@ -65,7 +65,7 @@ export class MembersComponent implements OnInit {
       "age": "1.5",
       "sex": "Male",
       "portrait": "",
-      "rating": "3"
+      "rating": 3
     },
     {
       "id": 4,
@@ -84,7 +84,7 @@ export class MembersComponent implements OnInit {
       "age": "46",
       "sex": "Female",
       "portrait": "",
-      "rating": "5"
+      "rating": 5
     }
   ]
   
