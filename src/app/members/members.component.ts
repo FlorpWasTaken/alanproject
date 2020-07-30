@@ -27,6 +27,7 @@ export class MembersComponent implements OnInit {
       "age": "17",
       "sex": "Male",
       "portrait": "",
+      "rating": "5"
     },
     {
       "id": 2,
@@ -44,7 +45,8 @@ export class MembersComponent implements OnInit {
       "height": "199cm",
       "age": "50",
       "sex": "Male",
-      "portrait": "../../../assets/images/alan.png"
+      "portrait": "../../../assets/images/alan.png",
+      "rating": "4"
     },
     {
       "id": 3,
@@ -62,7 +64,8 @@ export class MembersComponent implements OnInit {
       "height": "50cm",
       "age": "1.5",
       "sex": "Male",
-      "portrait": ""
+      "portrait": "",
+      "rating": "3"
     },
     {
       "id": 4,
@@ -80,7 +83,8 @@ export class MembersComponent implements OnInit {
       "height": '180cm',
       "age": "46",
       "sex": "Female",
-      "portrait": ""
+      "portrait": "",
+      "rating": "5"
     }
   ]
   

@@ -14,6 +14,7 @@ import { MoreInfoComponent } from './members/member/more-info/more-info.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { KeypadComponent } from './calculator/keypad/keypad.component';
+import { RatingComponent } from './members/member/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { KeypadComponent } from './calculator/keypad/keypad.component';
     MemberComponent,
     MoreInfoComponent,
     CalculatorComponent,
-    KeypadComponent
+    KeypadComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
