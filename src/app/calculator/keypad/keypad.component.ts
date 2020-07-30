@@ -66,6 +66,9 @@ public screen: string;
         break;
       case '/':
         this.results = Number(this.firstNumber) / Number(this.secondNumber)
+        break;
+      default:
+      // Do sommething if none of the above is true
     }
     console.log('Results ',this.results);
     this.screen = this.results.toString();
